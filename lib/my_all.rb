@@ -3,10 +3,10 @@ require 'pry'
 def my_all?(collection)
   i = 0
   while i < collection.length
-    binding.pry
+
     yield(collection[i])
     i += 1
   end
 end
-
+binding.pry
 my_all?([1,2,3]) { |i| i < 2 }
